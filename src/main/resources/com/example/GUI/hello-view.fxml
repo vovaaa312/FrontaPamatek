@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUI.MainWindow.Controller">
+   <children>
+      <GridPane layoutX="130.0" layoutY="569.0" prefHeight="17.0" prefWidth="209.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="FirsBTN" mnemonicParsing="false" onAction="#OnClickFirsBTN" text="&lt;&lt;" GridPane.rowIndex="1" />
+            <Button fx:id="PreviousBTN" mnemonicParsing="false" onAction="#OnClickPreviousBTN" text="&lt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="NextBTN" mnemonicParsing="false" onAction="#OnClickNextBTN" text="&gt;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="LastBTN" mnemonicParsing="false" onAction="#OnClickLastBTN" text="&gt;&gt;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <ListView fx:id="MainListView" layoutX="14.0" layoutY="15.0" prefHeight="542.0" prefWidth="441.0" />
+      <Button fx:id="vlozZamek" layoutX="471.0" layoutY="15.0" mnemonicParsing="false" onAction="#OnClickVlozZamek" prefHeight="25.0" prefWidth="94.0" text="Vloz zamek" />
+      <Button fx:id="najdiZamek" layoutX="472.0" layoutY="78.0" mnemonicParsing="false" onAction="#OnClickNajdiZamek" prefHeight="25.0" prefWidth="94.0" text="Najdi zamek" />
+      <Button fx:id="najdiNejbliz" layoutX="472.0" layoutY="113.0" mnemonicParsing="false" onAction="#OnClickNajdiNejbliz" prefHeight="25.0" prefWidth="94.0" text="Najdi nejbliz" />
+      <Button fx:id="importDat" layoutX="472.0" layoutY="494.0" mnemonicParsing="false" onAction="#OnClickImportDat" prefHeight="25.0" prefWidth="94.0" text="Import dat" />
+      <Button fx:id="odeberZamek" layoutX="471.0" layoutY="46.0" mnemonicParsing="false" onAction="#OnClickOdeberZamek" text="Odeber zamek" />
+      <Button fx:id="zrus" layoutX="471.0" layoutY="532.0" mnemonicParsing="false" onAction="#OnClickZrus" prefHeight="25.0" prefWidth="94.0" text="Zrus" />
+      <Button fx:id="prebuduj" layoutX="472.0" layoutY="173.0" mnemonicParsing="false" onAction="#OnClickPrebuduj" prefHeight="25.0" prefWidth="94.0" text="Prebuduj" />
+      <TextField fx:id="prebudujTf" editable="false" layoutX="472.0" layoutY="205.0" prefHeight="25.0" prefWidth="94.0" />
+      <Slider fx:id="generujSlider" blockIncrement="1.0" layoutX="457.0" layoutY="279.0" majorTickUnit="1.0" max="10.0" min="1.0" prefHeight="38.0" prefWidth="122.0" showTickLabels="true" showTickMarks="true" />
+      <Button fx:id="generujBTN" layoutX="472.0" layoutY="254.0" mnemonicParsing="false" onAction="#OnClickGenerujBTN" prefHeight="25.0" prefWidth="94.0" text="Generuj" />
+      <Button fx:id="fronta" layoutX="471.0" layoutY="455.0" mnemonicParsing="false" onAction="#OnClickFronta" prefHeight="25.0" prefWidth="94.0" text="Fronta" />
+      <TextField fx:id="yTf" layoutX="471.0" layoutY="422.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField layoutX="471.0" layoutY="389.0" prefHeight="25.0" prefWidth="107.0" fx:id="xTf" />
+      <Label layoutX="457.0" layoutY="393.0" text="X" />
+      <Label layoutX="457.0" layoutY="426.0" text="Y" />
+      <CheckBox fx:id="defoltCheckBox" layoutX="457.0" layoutY="372.0" mnemonicParsing="false" text="Defoltni poloha" />
+      <CheckBox fx:id="souborFrontaCheckBox" layoutX="457.0" layoutY="355.0" mnemonicParsing="false" text="Fronta ze souboru" />
+   </children>
+</AnchorPane>
