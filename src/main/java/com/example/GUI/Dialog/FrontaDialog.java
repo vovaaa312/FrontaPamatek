@@ -20,13 +20,16 @@ public class FrontaDialog extends Stage {
     private GridPane mainGridPane;
     private int rows;
 
+    private Label maxPrvek;
+
     public FrontaDialog(FrontaPamatek abstrHeap) {
         this.fronta = abstrHeap;
+        maxPrvek = new Label();
         setTitle("Fronta");
-
-        setHeight(150);
+        setHeight(200);
         setResizable(false);
         setScene(start());
+
     }
 
     private Scene start() {
@@ -34,11 +37,13 @@ public class FrontaDialog extends Stage {
         vBox.setAlignment(Pos.CENTER);
 
         mainGridPane = new GridPane();
-        mainGridPane.setAlignment(Pos.CENTER);
+        mainGridPane.setAlignment(Pos.TOP_LEFT);
         mainGridPane.setPadding(new Insets(20));
         mainGridPane.setHgap(7);
         mainGridPane.setVgap(20);
         mainGridPane.add(new Label("Poloha: " + fronta.getPoloha()), 0, rows);
+        rows++;
+        mainGridPane.add(maxPrvek, 0, rows);
         rows++;
         vBox.getChildren().addAll(mainGridPane);
 
@@ -69,19 +74,18 @@ public class FrontaDialog extends Stage {
 
     private void odeberMax() {
         fronta.odeberMax();
-
+        maxPrvek.setText(fronta.zpristupniMax().toString());
     }
 
     private void zpristupniMax() {
+        maxPrvek.setText(fronta.zpristupniMax().toString());
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Maxiamalni priorita: ");
         alert.setHeaderText(fronta.zpristupniMax().toString());
-
         alert.showAndWait();
 
+
     }
-
-
 
 
 }
