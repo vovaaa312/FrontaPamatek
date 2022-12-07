@@ -29,7 +29,7 @@ public class Delka implements Comparable<Delka>{
 
     @Override
     public String toString() {
-        return zamek.toString();
+        return zamek.toString() + " " + delka;
     }
 
     @Override

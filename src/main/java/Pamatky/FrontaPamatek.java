@@ -61,7 +61,7 @@ public class FrontaPamatek<D> implements IAbstrHeap<Delka> {
 
             zamek = new Zamek("", nazev, new GPS(x, y), enumTypKey.GPS);
             if (zamek.getId() != null && zamek.getNazev() != null) {
-                String polohaZamku = zamek.getGps().getX() + " " + zamek.getGps().getY();
+                String polohaZamku = x + " " + y;
 
                 Delka delka = new Delka(zamek, calc(poloha, polohaZamku));  //TODO поменять 'delka'
                 list.add(delka);

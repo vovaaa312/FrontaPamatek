@@ -8,8 +8,8 @@ public class Zamek implements Comparable<Zamek> {
     private GPS gps;
     private enumTypKey typKey;
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
 
 
     public Zamek(String id, String nazev, GPS gps, enumTypKey typKey) {
@@ -17,8 +17,8 @@ public class Zamek implements Comparable<Zamek> {
         this.nazev = nazev;
         this.gps = gps;
         this.typKey = typKey;
-        this.x = x;
-        this.y = y;
+        this.x = gps.getX();
+        this.y = gps.getY();
     }
 
     public String getId() {
